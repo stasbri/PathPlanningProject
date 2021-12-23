@@ -149,6 +149,7 @@ SearchResult Search::startSearch(ILogger *Logger, const Map &map, const Environm
     bool no_way_to_go = true;
     int number_of_steps = 0;
     while (!done){
+        number_of_steps++;
         min_f_value = INFINITY;
         for (const auto& [key, value] : nodes){
             if (value.open){
