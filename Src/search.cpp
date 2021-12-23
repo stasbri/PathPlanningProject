@@ -35,7 +35,6 @@ void Search::heuristic(Node &n, Node end, const EnvironmentOptions &options) {
     else if (options.metrictype == CN_SP_MT_MANH){
         n.h = abs(n.i - end.i) + abs(n.j - end.j);
     }
-    n.h = 0;
     n.f = n.h * 1.001 + n.g;
     //std::cout << "f: " << n.f << '\n';
 
